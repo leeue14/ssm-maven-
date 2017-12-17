@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签-->
+    
+    
+ <mapper namespace="com.leeue.o2o.dao.AreaDao"> <!--namespace里面写是那个Dao -->
+ 
+ 	<!-- 这个id是AreaDao里面的查询列表函数名相同 
+ 		resultType:是规定返回值的类型
+ 	-->
+ 	<select id="queryArea" resultType="com.leeue.o2o.entity.Area">
+ 		SELECT area_id,area_name,priority,create_time,last_edit_time
+ 		FORM tb_area
+ 		ORDER BY priority DESC
+ 	</select>  
+ 	
+ 	
+ 
+ </mapper>
